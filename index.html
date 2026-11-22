@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Copyright 2026 Umberto Gotti. Licensed under the Apache License, Version 2.0. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raft in a page</title>
+  <!-- The page's wasm: built in the hardened web profile and shrunk by wasm-opt
+       for a release, in the dev profile otherwise. wasm-opt is told the
+       features Rust's wasm target uses by default, and no others. -->
+  
+<script type="module">
+import init, * as bindings from '/browser-ui-db10fa10e1fe3097.js';
+
+const wasm = await init({ module_or_path: '/browser-ui-31472959af510e09_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #1b1b1b; }
+    canvas#raft { display: block; width: 100%; height: 100%; }
+  </style>
+<link rel="modulepreload" href="/browser-ui-db10fa10e1fe3097.js" crossorigin="anonymous" integrity="sha384-ZhmDzygMI/lJrPgy19gBGHWyKQGDsasyGiLCcAMikbu44V76XuCQZWdzXUlFHnI4"><link rel="preload" href="/browser-ui-31472959af510e09_bg.wasm" crossorigin="anonymous" integrity="sha384-GHGZOYZnJVSU6VqpUGTxKKLjPxSwBb60BFzXl9yJA1pX7KfjHGRgtCCcXzG7uhoS" as="fetch" type="application/wasm"></head>
+<body>
+  <canvas id="raft"></canvas>
+</body>
+</html>
