@@ -1,0 +1,12 @@
+Raft in a page
+Copyright 2026 Umberto Gotti. All rights reserved.
+
+This repository holds a compiled page -- WebAssembly, JavaScript and HTML --
+served at https://raft.umbertogotti.dev. Its source is held privately and is
+not published here. No licence to use, copy, modify or redistribute the page's
+own code is granted.
+
+The page links third-party software into its WebAssembly. That software is
+each under its own licence, and only under those licences; the file
+THIRD-PARTY-NOTICES.txt carries their notices, as the licences ask. The terms
+above do not reach it.
