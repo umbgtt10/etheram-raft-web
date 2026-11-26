@@ -14,7 +14,7 @@
 <script type="module">
 import init, * as bindings from '/browser-ui-d3519ba7b46f85ba.js';
 
-const wasm = await init({ module_or_path: '/browser-ui-900e2b51ed68176c_bg.wasm' });
+const wasm = await init({ module_or_path: '/browser-ui-1b0bdab2c79a2a8e_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -27,7 +27,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     html, body { margin: 0; height: 100%; overflow: hidden; background: #1b1b1b; }
     canvas#raft { display: block; width: 100%; height: 100%; }
   </style>
-<link rel="modulepreload" href="/browser-ui-d3519ba7b46f85ba.js" crossorigin="anonymous" integrity="sha384-Dod55Orv0prD/MItcQJTGVHqGF+DXT2pfxyTSzhCK0tv6igz28gSfV+g4zJ581FE"><link rel="preload" href="/browser-ui-900e2b51ed68176c_bg.wasm" crossorigin="anonymous" integrity="sha384-qMxHSTZN3pFXFseTGCV7pf8LNrFu5s4dNiPGeHll633aWF24rMsDdST5RpU8zpfr" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/browser-ui-d3519ba7b46f85ba.js" crossorigin="anonymous" integrity="sha384-Dod55Orv0prD/MItcQJTGVHqGF+DXT2pfxyTSzhCK0tv6igz28gSfV+g4zJ581FE"><link rel="preload" href="/browser-ui-1b0bdab2c79a2a8e_bg.wasm" crossorigin="anonymous" integrity="sha384-iW19f8oVHntGQG28ajrTxMvqOLty2acszFXopQjEL4NIpgqN8Yr6hZ+kv9M0M1l/" as="fetch" type="application/wasm"></head>
 <body>
   <canvas id="raft"></canvas>
 </body>
