@@ -5,6 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raft in a page</title>
+  <!-- What a link to the page shows where it is shared: link previews read
+       this head as it is, running no script, so the canvas tells them nothing. -->
+  <meta name="description" content="A real Rust Raft implementation running in your browser: dynamic membership, snapshots, fault injection, and partitions you draw with the mouse.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Raft in a page">
+  <meta property="og:description" content="The same Raft crate that runs on microcontrollers, live in your browser. Draw a line to partition the cluster.">
+  <meta property="og:url" content="https://raft.umbertogotti.dev/">
+  <meta property="og:image" content="https://raft.umbertogotti.dev/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A cluster of 22 Raft nodes on the page's map, a line drawn across it to partition the network.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://raft.umbertogotti.dev/og.png">
+  <!-- The preview's picture, copied beside the page as it is built. -->
+  
   <!-- The tab's icon: a leader, red as the map draws it, and its followers. -->
   <link rel="icon" href="/favicon-5a4f6f3f6a31eeeb.svg" integrity="sha384-E8ceCV2JXm28aleXX3k83RI5pBTHyJbHiFvdlGT3DCDCF40vzPBwiDEne7gfKPG1"/>
   <!-- The page's wasm: built in the hardened web profile and shrunk by wasm-opt
@@ -12,9 +27,9 @@
        features Rust's wasm target uses by default, and no others. -->
   
 <script type="module">
-import init, * as bindings from '/browser-ui-22d8ec7e7739ae77.js';
+import init, * as bindings from '/browser-ui-b6f9e5d6bbe166cf.js';
 
-const wasm = await init({ module_or_path: '/browser-ui-27f43dffef61105c_bg.wasm' });
+const wasm = await init({ module_or_path: '/browser-ui-33f47a70f8a589f0_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -27,8 +42,14 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     html, body { margin: 0; height: 100%; overflow: hidden; background: #1b1b1b; }
     canvas#raft { display: block; width: 100%; height: 100%; }
   </style>
-<link rel="modulepreload" href="/browser-ui-22d8ec7e7739ae77.js" crossorigin="anonymous" integrity="sha384-3lO+MGautB2sj2VykGHPpanZO1UQfcv0WphmvyJqAFODpqxNg+WJEi3JnnzyZD8U"><link rel="preload" href="/browser-ui-27f43dffef61105c_bg.wasm" crossorigin="anonymous" integrity="sha384-Vci6vFDxYUIaQBd0hjZMOnYdw26gZdWdUuIvbc5h2dzkthyLmukq7xgMwwl0XWKj" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/browser-ui-b6f9e5d6bbe166cf.js" crossorigin="anonymous" integrity="sha384-zzhJb8P9pJUf1Y6LmhuLIOKr8OtH53daXucSFzZBO8YUIbpSWB+Sqqe3xHQledox"><link rel="preload" href="/browser-ui-33f47a70f8a589f0_bg.wasm" crossorigin="anonymous" integrity="sha384-yl4gnRe68KkPP+elLdl9zqTZBorAHQXbiC9BaybCsL8gkkQLMpo1DyR+GoLZII0G" as="fetch" type="application/wasm"></head>
 <body>
   <canvas id="raft"></canvas>
+  <noscript>
+    <p>Raft in a page: a real Rust Raft implementation running in your browser -- dynamic
+       membership, snapshots, fault injection, and partitions you draw with the mouse,
+       time from a thousandth of real time to four times it, and runs you can export and
+       replay. It needs JavaScript and WebAssembly.</p>
+  </noscript>
 </body>
 </html>

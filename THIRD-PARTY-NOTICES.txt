@@ -634,8 +634,8 @@ Used by:
 Apache License 2.0
 Used by:
   - etheram-core 0.1.0
-  - browser-deployment 1.0.1
-  - browser-ui 1.0.1
+  - browser-deployment 1.0.2
+  - browser-ui 1.0.2
   - event-log 0.1.0
   - node 0.1.0
   - node-infra 0.1.0
