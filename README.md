@@ -8,6 +8,11 @@ This repository holds the page as built and nothing of its source. Each
 commit publishes one build and names the commit it was built at; the page
 names its build too, and so does a run written out from it.
 
+## Reporting a bug
+
+By pull request, adding the run to [`bugs`](bugs/README.md), which says what a
+report needs.
+
 ## Licence
 
 The page's own code is **Copyright 2026 Umberto Gotti, all rights reserved**;
