@@ -634,8 +634,8 @@ Used by:
 Apache License 2.0
 Used by:
   - etheram-core 0.1.0
-  - browser-deployment 1.0.2
-  - browser-ui 1.0.2
+  - browser-deployment 1.1.0
+  - browser-ui 1.1.0
   - event-log 0.1.0
   - node 0.1.0
   - node-infra 0.1.0
@@ -1249,7 +1249,7 @@ DEALINGS IN THE SOFTWARE.
 ================================================================================
 MIT License
 Used by:
-  - ahash 0.8.14
+  - ahash 0.8.15
 --------------------------------------------------------------------------------
 Copyright (c) 2018 Tom Kaitchuck
 
@@ -1502,7 +1502,7 @@ DEALINGS IN THE SOFTWARE.
 ================================================================================
 MIT License
 Used by:
-  - arrayvec 0.7.8
+  - arrayvec 0.7.9
 --------------------------------------------------------------------------------
 Copyright (c) Ulrik Sverdrup "bluss" 2015-2023
 

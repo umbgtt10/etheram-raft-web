@@ -27,9 +27,9 @@
        features Rust's wasm target uses by default, and no others. -->
   
 <script type="module">
-import init, * as bindings from '/browser-ui-b6f9e5d6bbe166cf.js';
+import init, * as bindings from '/browser-ui-4c07607adc1bbfad.js';
 
-const wasm = await init({ module_or_path: '/browser-ui-33f47a70f8a589f0_bg.wasm' });
+const wasm = await init({ module_or_path: '/browser-ui-21ce0fdc66d75019_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -42,7 +42,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     html, body { margin: 0; height: 100%; overflow: hidden; background: #1b1b1b; }
     canvas#raft { display: block; width: 100%; height: 100%; }
   </style>
-<link rel="modulepreload" href="/browser-ui-b6f9e5d6bbe166cf.js" crossorigin="anonymous" integrity="sha384-zzhJb8P9pJUf1Y6LmhuLIOKr8OtH53daXucSFzZBO8YUIbpSWB+Sqqe3xHQledox"><link rel="preload" href="/browser-ui-33f47a70f8a589f0_bg.wasm" crossorigin="anonymous" integrity="sha384-yl4gnRe68KkPP+elLdl9zqTZBorAHQXbiC9BaybCsL8gkkQLMpo1DyR+GoLZII0G" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/browser-ui-4c07607adc1bbfad.js" crossorigin="anonymous" integrity="sha384-vjeikIgVg+cHdanuiEfwNCyLYsHu8346+7RxOxoMkuus2BNhMqAhT+Ipw+sVBB3D"><link rel="preload" href="/browser-ui-21ce0fdc66d75019_bg.wasm" crossorigin="anonymous" integrity="sha384-+CGoL+h8f7O/1N7W07JKVkSJiBAspB9qgVQDkW+ZWfHnAnt594FVNZpbHL/oplmO" as="fetch" type="application/wasm"></head>
 <body>
   <canvas id="raft"></canvas>
   <noscript>
